@@ -8,8 +8,30 @@
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+            "PACKAGE_NAME": "com.hiapp.hiapp"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.hiapp.hiapp"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.hiapp.hiapp"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.hiapp.hiapp"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.hiapp.hiapp"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.hiapp.hiapp"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.hiapp.hiapp"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.hiapp.hiapp"
+        }
+    }
 }
