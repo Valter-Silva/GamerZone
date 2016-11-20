@@ -1,0 +1,29 @@
+
+ [{"id":16504,
+ "name":"Dyscourse",
+ "release_dates":[{"category":0,"platform":6,"date":1422918000000},
+ {"category":0,"platform":14,"date":1422918000000},
+ {"category":0,"platform":3,"date":1422918000000}]},
+
+ {"id":16498,"name":"March of War","release_dates":[{"category":0,"platform":6,"date":1398981600000},
+ {"category":0,"platform":14,"date":1398981600000}]},
+
+ {"id":16497,"name":"Timelines: Assault on America",
+ "release_dates":[{"category":0,"platform":6,"date":1375394400000},
+ {"category":0,"platform":14,"date":1375394400000},
+ {"category":0,"platform":3,"date":1375394400000}]},
+
+ {"id":16493,"name":"Another World – 20th Anniversary Edition",
+ "release_dates":[{"category":0,"platform":6,"date":1362351600000},
+ {"category":0,"platform":14,"date":1362351600000},
+ {"category":0,"platform":3,"date":1362351600000}]},
+
+ {"id":16492,"name":"Wake"},{"id":16491,"name":"Lunnye Devitsy"},
+ {"id":16487,"name":"SolForge"},{"id":16484,"name":"Ragnarok Online 2",
+ "release_dates":[{"category":0,"platform":6,"date":1364940000000}]},{"id":16482,"name":"DIVO","release_dates":[{"category":0,"platform":6,"date":1357340400000},{"category":0,"platform":3,"date":1357340400000}]},{"id":16480,"name":"Loren the Amazon Princess","release_dates":[{"category":0,"platform":6,"date":1335736800000,"region":8},{"category":0,"platform":14,"date":1335736800000,"region":8},{"category":0,"platform":3,"date":1335736800000,"region":8}]}]  
+ 
+
+ request.open('GET',"https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name&limit=10&offset=0&order=release_dates.date%3Adesc&search=zelda")
+    .header("X-Mashape-Key", "s4FxqgEKLmmshNOUp9m2EDHkTQqqp1uJjZIjsntn3FsNh5kPUP")
+    .header("Accept", "application/json")
+    .asString();

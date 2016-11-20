@@ -58,7 +58,7 @@ module.exports = {
         like:'Like'
     },
     item:{
-        title:'Tweet'
+        title:'Review'
     },
     comment:{
         reply:'Reply',
