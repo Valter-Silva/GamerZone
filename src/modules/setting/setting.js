@@ -25,8 +25,7 @@ var settingView = {
     },
     logOut: function(){
         hiApp.confirm(i18n.setting.confirm_logout,function(){
-            //mainView.router.loadPage('page/login.html');
-            //hiApp.showTab('#ourView');
+            hiApp.loginScreen();
         });
     },
     bindEvents: function(){

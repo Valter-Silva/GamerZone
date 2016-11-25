@@ -100,6 +100,11 @@ var app = {
                     back: i18n.global.back,
                     done: i18n.global.done,
                     switchLanguage: i18n.global.switch_language
+                },
+                'page:login': {
+                    back: i18n.global.back,
+                    appName: i18n.app.name,
+                    login: i18n.login.login_btn
                 }
             }
         });
@@ -115,6 +120,8 @@ var app = {
         hiApp.addView('#settingView', {
             dynamicNavbar: true
         });
+
+        hiApp.addView('#loginView');
 
         // init app
         router.init();

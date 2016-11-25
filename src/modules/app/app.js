@@ -12,6 +12,7 @@ module.exports = {
         homeView.init();
         contactsView.init();
         settingView.init();
+        loginView.init();
     },
 
     i18next: function(content){
