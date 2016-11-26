@@ -113,5 +113,9 @@ module.exports = {
                     .on(bindings[i].event, bindings[i].handler);
             }
         }
+    },
+
+    checkEquals: function(string1, string2) {
+        return string1==string2;
     }
 };
