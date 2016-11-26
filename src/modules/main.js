@@ -68,7 +68,7 @@ var app = {
         });
 
         window.$$ = Dom7;
-        window.hiApp = new Framework7({
+        window.App = new Framework7({
             pushState: false,
             popupCloseByOutside:false,
             animateNavBackIcon: true,
@@ -100,19 +100,23 @@ var app = {
                     back: i18n.global.back,
                     done: i18n.global.done,
                     switchLanguage: i18n.global.switch_language
+                },
+                'page:game': {
+                    back: i18n.global.back,
+                    done: i18n.global.done,
                 }
             }
         });
 
-        window.homeF7View = hiApp.addView('#homeView', {
+        window.homeF7View = App.addView('#homeView', {
             dynamicNavbar: true
         });
 
-        hiApp.addView('#contactView', {
+        App.addView('#contactView', {
             dynamicNavbar: true
         });
 
-        hiApp.addView('#settingView', {
+        App.addView('#settingView', {
             dynamicNavbar: true
         });
 

@@ -5,6 +5,7 @@ var index = require('./app/app'),
     aboutModule = require('./about/about'),
     languageModule = require('./language/language'),
     messageModule = require('./message/message');
+    gameModule = require('./game/game');
 
 module.exports = {
     init: function() {
@@ -48,6 +49,9 @@ module.exports = {
                 break;
             case 'language':
                 languageModule.init();
+                break;
+            case 'game':
+                gameModule.init();
                 break;
         }
     }

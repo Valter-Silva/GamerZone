@@ -24,7 +24,7 @@ function search(){
 
       $("#stuff").empty;
       for (var i = 0; i < obj.length; i++) {
-        $("#stuff").append("<div class='search_item'><img src=https://res.cloudinary.com/igdb/image/upload/t_cover_big/"+ obj[i].cover.cloudinary_id+".jpg><div class='item_title'>"+obj[i].name+"</div>");
+        $("#stuff").append("<div data-id="+ obj[i].id +" class='search_item'><img src=https://res.cloudinary.com/igdb/image/upload/t_cover_small_2x/"+ obj[i].cover.cloudinary_id+".jpg><div class='item_title'>"+obj[i].name+"</div>");
         }
     }   
   };

@@ -10,23 +10,23 @@ var settingView = {
     renderSetting: function(){
         if($$('#settingView .page-content')[0]) return;
 
-        hiApp.showIndicator();
+        App.showIndicator();
 
         var renderData = {
             avatarUrl: 'http://lorempixel.com/68/68/people/7/',
-            nickName: 'HiApp',
+            nickName: 'GamerZone',
             points: '100'
         };
 
         var output = appFunc.renderTpl(template, renderData);
         $$('#settingView .page[data-page="setting"]').html(output);
 
-        hiApp.hideIndicator();
+        App.hideIndicator();
     },
     logOut: function(){
-        hiApp.confirm(i18n.setting.confirm_logout,function(){
+        App.confirm(i18n.setting.confirm_logout,function(){
             //mainView.router.loadPage('page/login.html');
-            //hiApp.showTab('#ourView');
+            //App.showTab('#ourView');
         });
     },
     bindEvents: function(){

@@ -16,7 +16,7 @@ var home = {
         service.getTimeline(function(tl){
             that.renderTimeline(tl);
 
-            hiApp.hideIndicator();
+            App.hideIndicator();
 
             //Unlock scroll loading status
             var ptrContent = $$('#homeView').find('.pull-to-refresh-content');
@@ -38,7 +38,7 @@ var home = {
 
                 if(parseInt(newestId) === 48) {
                     home.showLoadResult(i18n.index.nothing_loaded);
-                    hiApp.pullToRefreshDone();
+                    App.pullToRefreshDone();
                     return false;
                 }
 
@@ -52,7 +52,7 @@ var home = {
                     home.showLoadResult(i18n.index.nothing_loaded);
                 }
 
-                hiApp.pullToRefreshDone();
+                App.pullToRefreshDone();
 
             },1500);
 
@@ -61,7 +61,7 @@ var home = {
     infiniteTimeline: function(){
         var $this = $$(this);
 
-        hiApp.showIndicator();
+        App.showIndicator();
         service.infiniteTimeline(function(tl){
             var status = $this.data('scrollLoading');
             if (status === 'loading') return;
@@ -72,15 +72,15 @@ var home = {
             var length = items.length;
             var lastId = items.eq(length - 1).data('id');
             if(parseInt(lastId) === 24){
-                hiApp.detachInfiniteScroll($this);
-                hiApp.hideIndicator();
+                App.detachInfiniteScroll($this);
+                App.hideIndicator();
             }else{
 
                 setTimeout(function(){
                     $this.data('scrollLoading','unloading');
                     home.renderTimeline(tl, 'append');
 
-                    hiApp.hideIndicator();
+                    App.hideIndicator();
                 },1500);
             }
         });
@@ -92,7 +92,7 @@ var home = {
 
         $$('#homeView .pull-to-refresh-content').scrollTop(0,300);
 
-        hiApp.pullToRefreshTrigger('#homeView .pull-to-refresh-content');
+        App.pullToRefreshTrigger('#homeView .pull-to-refresh-content');
     },
     showLoadResult: function(text){
         setTimeout(function(){
@@ -113,7 +113,7 @@ var home = {
 
         var url = $$(this).attr('src');
 
-        var myPhotoBrowser = hiApp.photoBrowser({
+        var myPhotoBrowser = App.photoBrowser({
             photos: [url],
             toolbar: false,
             backLinkText: i18n.global.close
@@ -146,7 +146,14 @@ var home = {
             return false;
         }
         var itemId = $$(this).data('id');
-        homeF7View.router.loadPage('page/tweet.html?id=' + itemId);
+        homeF7View.router.loadPage('page/review.html?id=' + itemId);
+    },
+    openGamePage: function(e){
+        if(e.target.nodeName === 'A' || e.target.nodeName === 'IMG'){
+            return false;
+        }
+        var itemId = $$(this).data('id');
+        homeF7View.router.loadPage('page/game.html?id=' + itemId);
     },
     bindEvent: function(){
 
@@ -180,6 +187,11 @@ var home = {
             selector:'div.card-content .item-image>img',
             event: 'click',
             handler: this.photoBrowser
+        },{
+            element: '#homeView',
+            selector:'div.search_item',
+            event: 'click',
+            handler: this.openGamePage
         }];
 
         appFunc.bindEvents(bindings);
