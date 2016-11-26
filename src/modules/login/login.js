@@ -13,9 +13,9 @@ var login = {
 		var username = $$('#username').val();
 	    var password = $$('#password').val();
 	    // Handle username and password
-	    //hiApp.alert('Username: ' + username + ', Password: ' + password);
+	    //App.alert('Username: ' + username + ', Password: ' + password);
 	    if(appFunc.checkEquals(username, "S") && appFunc.checkEquals(password, "123")){
-	    	hiApp.closeModal('#loginView');
+	    	App.closeModal('#loginView');
 	    } 
 	},
     bindEvents: function(){

@@ -24,14 +24,12 @@ var settingView = {
         App.hideIndicator();
     },
     logOut: function(){
-<<<<<<< HEAD
         App.confirm(i18n.setting.confirm_logout,function(){
             //mainView.router.loadPage('page/login.html');
             //App.showTab('#ourView');
-=======
-        hiApp.confirm(i18n.setting.confirm_logout,function(){
-            hiApp.loginScreen();
->>>>>>> origin/Santi
+        });
+        App.confirm(i18n.setting.confirm_logout,function(){
+            App.loginScreen();
         });
     },
     bindEvents: function(){

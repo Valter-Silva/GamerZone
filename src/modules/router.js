@@ -4,13 +4,10 @@ var index = require('./app/app'),
     feedbackModule = require('./feedback/feedback'),
     aboutModule = require('./about/about'),
     languageModule = require('./language/language'),
-<<<<<<< HEAD
     messageModule = require('./message/message');
     gameModule = require('./game/game');
-=======
     messageModule = require('./message/message')
     loginModule = require('./login/login');
->>>>>>> origin/Santi
 
 module.exports = {
     init: function() {
@@ -55,13 +52,11 @@ module.exports = {
             case 'language':
                 languageModule.init();
                 break;
-<<<<<<< HEAD
             case 'game':
                 gameModule.init();
-=======
+                break;
             case 'login':
                 loginModule.init();
->>>>>>> origin/Santi
                 break;
         }
     }

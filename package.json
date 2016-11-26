@@ -3,10 +3,6 @@
   "description": "A web app made with Framework7 with PhoneGap you for video games reviews",
   "version": "0.0.1",
   "author": "Valter Silva",
-<<<<<<< HEAD
-=======
-  "license": "ISC",
->>>>>>> origin/Santi
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Valter-Silva/GamerZone.git"
@@ -35,17 +31,13 @@
   },
   "dependencies": {
     "framework7": "~1.4.0",
-<<<<<<< HEAD
     "mustache": "^2.3.0",
     "request": "^2.60.0"
-  }
-=======
-    "mustache": "^2.3.0"
   },
   "bugs": {
     "url": "https://github.com/Valter-Silva/GamerZone/issues"
   },
   "homepage": "https://github.com/Valter-Silva/GamerZone#readme",
-  "main": "index.js"
->>>>>>> origin/Santi
+  "main": "index.js",
+  "license": "ISC"
 }
