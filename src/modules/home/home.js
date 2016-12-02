@@ -33,7 +33,7 @@ var home = {
             var newestId = $$('#homeView').find('.home-timeline .card'). eq(0).data('id');
 
             setTimeout(function () {
-
+                document.getElementById("stuff").innerHTML = "";
                 $$('#homeView .refresh-click').find('i').removeClass('ios7-reloading');
 
                 if(parseInt(newestId) === 48) {
