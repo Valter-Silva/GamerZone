@@ -25,6 +25,7 @@ function search(){
       document.getElementById("stuff").innerHTML = "";
       for (var i = 0; i < obj.length; i++) {
         try {
+            var game = obj[i];
             var x = obj[i].cover.cloudinary_id;
             // do something with x
              $("#stuff").append("<div data-id="+ obj[i].id +" class='search_item'><img src=https://res.cloudinary.com/igdb/image/upload/t_cover_small_2x/"+ obj[i].cover.cloudinary_id+".jpg><div class='item_title'>"+obj[i].name+"</div></div>");
@@ -54,13 +55,6 @@ function search(){
                 </div>
 
                 <div class="center sliding i18n" data-i18n="app.name"></div>
-
-                <div class="right">
-                    <a href="#" class="open-send-popup link icon-only">
-                        <i class="icon ios7-compose-outline"></i>
-                    </a>
-                </div>
-
             </div>
         </div>
         
@@ -166,7 +160,9 @@ function search(){
         <div data-page="login-screen" class="page">
             <div class="page-content login-screen-content">
                 <div class="page-content login-screen-content">
-                  <div class="login-screen-title">GamerZone</div>
+                  <div class="content-block">
+                    <div class="logo"></div>
+                </div>
                   <form>
                     <div class="list-block">
                       <ul>

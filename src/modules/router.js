@@ -53,7 +53,7 @@ module.exports = {
                 languageModule.init();
                 break;
             case 'game':
-                gameModule.init();
+                gameModule.init(query);
                 break;
             case 'login':
                 loginModule.init();

@@ -146,7 +146,8 @@ var home = {
             return false;
         }
         var itemId = $$(this).data('id');
-        homeF7View.router.loadPage('page/review.html?id=' + itemId);
+        var gameObj = $$(this).game;
+        homeF7View.router.loadPage('page/review.html?id=' + itemId + '?game=' + gameObj);
     },
     openGamePage: function(e){
         if(e.target.nodeName === 'A' || e.target.nodeName === 'IMG'){
