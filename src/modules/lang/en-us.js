@@ -25,6 +25,7 @@ module.exports = {
         review: 'Review',
         contacts: 'Contacts',
         setting: 'Setting',
+        profile: 'Profile',
         sen_review: 'New Review',
         send_placeholder: 'What is new with you.',
         sending:'Submitting...',

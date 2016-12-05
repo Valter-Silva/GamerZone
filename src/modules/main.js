@@ -125,6 +125,10 @@ var app = {
             dynamicNavbar: true
         });
 
+        App.addView('#profileView', {
+            dynamicNavbar: true
+        });
+
         App.addView('#loginView');
 
         // init app

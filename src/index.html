@@ -122,6 +122,31 @@ function search(){
         </div>
     </div>
 
+    <div id="profileView" class="view tab">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#"  class="refresh-click link">
+                        <i class="icon ios7-reload"></i>
+                    </a>
+                </div>
+
+                <div class="center sliding i18n" data-i18n="index.profile"></div>
+            </div>
+        </div>
+        
+        <div class="pages navbar-through">
+            <div data-distance="50" class="page infinite-scroll">
+                <div class="pull-to-refresh-layer">
+                    <div class="preloader"></div>
+                    <div class="pull-to-refresh-arrow"></div>
+                </div>
+                <div class="load-result"></div>
+                <div class="home-timeline"></div>
+            </div>
+        </div>
+    </div>
+
     <div id="settingView" class="view tab">
         <div class="navbar">
             <div class="navbar-inner">
@@ -145,6 +170,11 @@ function search(){
             <a href="#contactView" class="tab-link">
                 <i class="icon ios7-chatbubble-outline"></i>
                 <span class="tabbar-label i18n" data-i18n="index.contacts"></span>
+            </a>
+
+            <a href="#profileView" class="tab-link">
+                <i class="icon ios7-person-outline"></i>
+                <span class="tabbar-label i18n" data-i18n="index.profile"></span>
             </a>
 
             <a href="#settingView" class="tab-link">

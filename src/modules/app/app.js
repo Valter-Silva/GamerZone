@@ -4,7 +4,8 @@ var appFunc = require('../utils/appFunc'),
     loginView = require('../login/login'),
     homeView = require('../home/home'),
     contactsView = require('../contacts/contacts'),
-    settingView = require('../setting/setting');
+    settingView = require('../setting/setting'),
+    profileView = require('../profile/profile');
 
 module.exports = {
     init: function(){
@@ -12,6 +13,7 @@ module.exports = {
         homeView.init();
         contactsView.init();
         settingView.init();
+        profileView.init();
         loginView.init();
     },
 

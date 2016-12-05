@@ -4,9 +4,10 @@ var index = require('./app/app'),
     feedbackModule = require('./feedback/feedback'),
     aboutModule = require('./about/about'),
     languageModule = require('./language/language'),
-    messageModule = require('./message/message');
-    gameModule = require('./game/game');
-    messageModule = require('./message/message')
+    messageModule = require('./message/message'),
+    gameModule = require('./game/game'),
+    messageModule = require('./message/message'),
+    profileModule = require('./profile/profile'),
     loginModule = require('./login/login');
 
 module.exports = {
@@ -26,7 +27,7 @@ module.exports = {
         var name = page.name;
         var from = page.from;
 
-        if(name === 'homeView' || name === 'contactView' || name === 'setting' ){
+        if(name === 'homeView' || name === 'contactView' || name === 'setting' || name === 'profileView' ){
             if(from === 'left'){
                 appFunc.showToolbar();
             }
@@ -54,6 +55,9 @@ module.exports = {
                 break;
             case 'game':
                 gameModule.init(query);
+                break;
+            case 'profile':
+                profileModule.init();
                 break;
             case 'login':
                 loginModule.init();
