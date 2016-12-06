@@ -40,6 +40,7 @@ module.exports = {
         login_out: 'Log out',
         nickname: 'Name',
         points: 'Points',
+        location: 'Location',
         confirm_logout:'Are you sure to log out?',
         current_version:'The current version is '
     },

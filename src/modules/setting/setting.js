@@ -15,7 +15,7 @@ var settingView = {
         var renderData = {
             avatarUrl: 'http://lorempixel.com/68/68/people/7/',
             nickName: 'GamerZone',
-            points: '100'
+            location: 'Budapest, Hungary'
         };
 
         var output = appFunc.renderTpl(template, renderData);
