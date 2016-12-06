@@ -3,62 +3,63 @@ module.exports = {
         name: 'GamerZone'
     },
     global: {
-        cancel: 'Cancel',
-        send: 'Send',
-        back:'Back',
-        done:'Done',
-        searchContacts:'Search Contacts',
-        searchVideoGames: 'Search Video Games',
-        modal_title: 'System',
+        cancel: 'Töröl',
+        send: 'Elküld',
+        back:'Hát',
+        done:'Kész',
+        searchContacts:'Keresés Kapcsolatok',
+        searchVideoGames: 'Keresés Video Games',
+        modal_title: 'Rendszer',
         modal_button_ok: 'OK',
-        minute_ago:' mins ago',
-        hour_ago:' hours ago',
-        day_ago:' days ago',
-        just_now:'Just now',
+        minute_ago:'perce',
+        hour_ago:'órákkal ezelőtt',
+        day_ago:'napja',
+        just_now:'Pont most',
         language:'Language',
-        switch_language:'Switching languages'
+        switch_language:'Nyelvváltás'
     },
     index: {
-        nothing_found: 'No matching results',
-        nothing_loaded:'Nothing loaded',
-        home: 'Home',
-        review: 'Review',
-        contacts: 'Contacts',
-        setting: 'Setting',
-        sen_review: 'New Review',
+        nothing_found: 'Nincs találat',
+        nothing_loaded:'Semmi betöltött',
+        home: 'Otthon',
+        review: 'Szemple',
+        contacts: 'Kapcsolatok',
+        setting: 'Beállítás',
+        profile: 'Profil',
+        sen_review: 'Új értékelés',
         send_placeholder: 'What is new with you.',
-        sending:'Submitting...',
-        err_text_too_short:'Ah,Content is too short'
+        sending:'Beküldés...',
+        err_text_too_short:'Ah, tartalom túl rövid'
     },
     setting: {
-        feed_back: 'Feedback',
+        feed_back: 'Visszacsatolás',
         feed_back_placeholder:'Hi,Any suggestions to tell us?',
         feed_back_result:'Thank you for your feedback',
         check_update: 'Update',
-        about: 'About',
-        login_out: 'Log out',
-        nickname: 'Name',
-        points: 'Points',
-        confirm_logout:'Are you sure to log out?',
-        current_version:'The current version is '
+        about: 'Ról ről',
+        login_out: 'Kijelentkezés',
+        nickname: 'Név',
+        points: 'Pont',
+        confirm_logout:'Biztos benne, hogy jelentkezzen ki?',
+        current_version:'A jelenlegi verzió'
     },
     login: {
-        loginname_placeholder: 'Email/Username',
-        password_placeholder: 'Password',
-        login_btn: 'Sign In',
-        sign_up: 'Sign Up',
-        forgot_pwd: 'Forgot password',
-        err_empty_input: 'Please enter login name and password',
-        err_illegal_email: 'Username must be Email',
-        login: 'Loading, please wait...'
+        loginname_placeholder: 'E-mail/felhasználónév',
+        password_placeholder: 'Jelszó',
+        login_btn: 'Bejelentkezés',
+        sign_up: 'Regisztrálj',
+        forgot_pwd: 'Elfelejtett jelszó',
+        err_empty_input: 'Kérjük, adja meg bejelentkezési név és jelszó',
+        err_illegal_email: 'A felhasználónév csak e-mail',
+        login: 'Betöltés, kérem várjon...'
     },
     timeline:{
-        forward:'Forward',
-        comment:'Comment',
-        like:'Like'
+        forward:'Előre',
+        comment:'Megjegyzés',
+        like:'Mint'
     },
     item:{
-        title:'Review'
+        title:'Szemle'
     },
     comment:{
         reply:'Reply',
@@ -69,14 +70,14 @@ module.exports = {
         commenting:'Submitting...'
     },
     chat:{
-        title:'Message',
-        chatPlaceholder:'Message'
+        title:'Üzenet',
+        chatPlaceholder:'Üzenet'
     },
     geo:{
         loading_geo:'Getting your geo info...',
         permission_denied:'Permission denied',
         position_unavailable:'Position unavailable',
-        timeout:'Getting timeout',
+        timeout:'Első timeout',
         confirm_clean_geo:'You will clear geo info'
     },
     camera:{
@@ -89,7 +90,7 @@ module.exports = {
         not_modified_err: 'Not modified'
     },
     error:{
-        unknown_error:'Unknown error',
+        unknown_error:'Ismeretlen hiba',
         no_network:'No network connection',
         phonegap_only:'PhoneGap Only'
     }

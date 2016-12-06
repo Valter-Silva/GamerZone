@@ -37,8 +37,8 @@ var app = {
                     app.initFramework7();
                 });
                 break;
-            case 'zh-cn':
-                require(['./lang/zh-cn'], function(lang){
+            case 'hu-hu':
+                require(['./lang/hu-hu'], function(lang){
                     window.i18n = lang;
                     app.initFramework7();
                 });
