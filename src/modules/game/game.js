@@ -48,11 +48,11 @@ var gameModule = {
         var $this = $$('#homeView .home-timeline .card[data-id="'+ id +'"]');
 
         var item = {
-            id: $this.data('id'),
-            nickname: $this.find('.ks-facebook-name').html(),
+            id: "The Legend of Zelda: Twilight Princess",
+            nicknaTme: "The Legend of Zelda: Twilight Princess",
             avatar: $this.find('.ks-facebook-avatar').data('avatar-id'),
             time: appFunc.timeFormat($this.find('.ks-facebook-date').data('time')),
-            text: $this.find('.card-content-inner>p').html()
+            text: 'The Legend of Zelda: Twilight Princess is a critically acclaimed masterpiece, set in a massive world bursting with life—but also shadow. A dark figure from the Twilight Realm has invaded the world of light. As Link™, a farmhand turned cursed beast, join forces with the impish Midna and trusted (albeit unusual) allies to survive a quest thatll take you to the farthest corners of Hyrule and beyond… to the Twilight Realm. This emotional adventure is now on the Wii U™ console with improved visuals and controls—and new challenges. Choose Hero Mode to take 2x normal damage, or tap the Wolf Link amiibo™ figure to unlock the tough Cave of Shadows'
         };
 
         if($this.find('.item-image>img')[0])
