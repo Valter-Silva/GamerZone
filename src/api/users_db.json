@@ -1,0 +1,10 @@
+{
+    "err_code": 0,
+    "err_msg": "success",
+    "data": [
+        {"username":"S","password":"123","email":"s@gmail.com"},
+        {"username":"Joao","password":"123","email":"j@gmail.com"},
+        {"username":"Valter","password":"123","email":"v@gmail.com"},
+        {"username":"Rami","password":"123","email":"r@gmail.com"}
+    ]
+}
