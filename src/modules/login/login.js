@@ -35,56 +35,52 @@ var login = {
 	    var password = $$('#password').val();
 	    // Handle username and password
 	    //App.alert('Username: ' + username + ', Password: ' + password);
-	    if(appFunc.checkEquals(username, "S") && appFunc.checkEquals(password, "123")){
-	    	App.closeModal('#loginView');
-	    } 
-	    //hiApp.alert('Username: ' + username + ', Password: ' + password);
 
 	    var ok=false;
 	    if(appFunc.checkEquals(username, localStorage.getItem("cacheUsername")) && appFunc.checkEquals(password, localStorage.getItem("cachePassword"))){
 	    	ok=true;
 	    	$$('#password').val("");
-	    	hiApp.closeModal('#loginView');
+	    	App.closeModal('#loginView');
 	    }else{
 			for (i = 0; i < usersData.length; i++) {
 			    if(appFunc.checkEquals(usersData[i].username, username) && appFunc.checkEquals(usersData[i].password, password)){
 			    	ok=true;
 	    			$$('#password').val("");
-			    	hiApp.closeModal('#loginView');
+			    	App.closeModal('#loginView');
 			    	break;
 			    }
 			}	    	
 	    }
 	    if(!ok){
-	    	hiApp.alert("Incorrect password or username.");
+	    	App.alert("Incorrect password or username.");
 	    }
 	},
     registerUser: function(usersData) {
 	    // Handle username and password
-	    //hiApp.alert('Username: ' + username + ', Password: ' + password);
+	    //App.alert('Username: ' + username + ', Password: ' + password);
 
-	    hiApp.prompt('Please, enter your email:', function (email) {
+	    App.prompt('Please, enter your email:', function (email) {
 	    	var ok=!appFunc.checkEquals(localStorage.getItem("cacheEmail"), email);
 
 	    	if(ok){
 		    	for (i = 0; i < usersData.length; i++) {
 				    if(appFunc.checkEquals(usersData[i].email, email)){
 				    	ok=false;
-	    				hiApp.alert('There is an account related to that email!');
+	    				App.alert('There is an account related to that email!');
 				    	break;
 				    }
 				}
 				if(ok){
 			    	if(email==""|| !appFunc.isEmail(email)){
-		    			hiApp.alert('Not a valid email!');
+		    			App.alert('Not a valid email!');
 		    		}else{
-			    		hiApp.modalLogin('Enter your username and password', function (username, password) {
+			    		App.modalLogin('Enter your username and password', function (username, password) {
 			    			var ok=true;
 			    			if(username==""||password==""){
-			        			hiApp.alert('Username or password invalid!');
+			        			App.alert('Username or password invalid!');
 			        			ok=false;
 			    			}if(ok){
-				        		hiApp.alert('Thank you, ' + username + '!');
+				        		App.alert('Thank you, ' + username + '!');
 								localStorage.setItem("cacheUsername", username);
 			    				$$('#username').val(username);
 								localStorage.setItem("cachePassword", password);
@@ -95,7 +91,7 @@ var login = {
 			        }
 				}
 	    	}else{
-	    		hiApp.alert('There is an account related to that email!');
+	    		App.alert('There is an account related to that email!');
 	    	}
 	    });
 	},

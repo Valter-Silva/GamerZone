@@ -3,7 +3,7 @@ var xhr = require('../utils/xhr');
 module.exports = {
     getProfile: function(callback){
         xhr.simpleCall({
-            func:'timeline'
+            func:'profile'
         },function(res){
             callback(res.data);
         });

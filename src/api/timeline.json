@@ -6,6 +6,7 @@
             "id": "41",
             "nickname":"Bob Brown",
             "avatar":"1",
+            "game":"Super Mario Bros",
             "text": "Has ipsum assum id. Mei reprehendunt concludaturque te, ne case suscipit qui. Cu sed commodo appetere, pro esse deleniti ne, detraxit consequat vix ex. Usu facer falli homero te, te sed officiis moderatius. Assum impetus partiendo no vel, dicunt eripuit te duo. Rating: 10/10",
             "original_pic": "",
             "created_at": "1404709434"
@@ -13,6 +14,7 @@
         {
             "id": "40",
             "nickname":"Jean Kerr",
+            "game":"The Legend of Zelda: Twilight Princess",
             "avatar":"7",
             "text": "Ne dicta aeque accusamus ius, decore pertinax no qui. Saperet assueverit his in. At ferri neglegentur sea. Magna eruditi admodum vis ei, cu has atqui summo commune. Eum facer adversarium ullamcorper in, mel id doctus eligendi. Vel ex sumo nihil appetere, at delectus appellantur usu. Rating: 7/10",
             "original_pic": "",
@@ -21,6 +23,7 @@
         {
             "id": "39",
             "nickname":"Colin L. Powell",
+            "game":"Mario Kart 8",
             "avatar":"3",
             "text": "There are no secrets to success. It is the result of preparation, hard work, and learning from failure. www.youtube.com ",
             "original_pic": "",
@@ -29,6 +32,7 @@
         {
             "id": "38",
             "nickname":"Balzac",
+            "game":"Bioshock",
             "avatar":"5",
             "text": "There is no such thing as a great talent without great will - power.",
             "original_pic": "http://lorempixel.com/1000/700/nature/5/",
@@ -37,6 +41,7 @@
         {
             "id": "37",
             "nickname":"Charles Chaplin",
+            "game":"Call of Duty 3",
             "avatar":"7",
             "text": "You have to believe in yourself. That's the secret of success.",
             "original_pic": "",
@@ -45,6 +50,7 @@
         {
             "id": "36",
             "nickname":"R.M. Nixon",
+            "game":"Call of Duty 4",
             "avatar":"4",
             "text": "Our destiny offers not the cup of despair, but the chalice of opportunity. So let us seize it, not in fear, but in gladness.",
             "original_pic": "",
@@ -53,6 +59,7 @@
         {
             "id": "35",
             "nickname":"Erasmus",
+            "game":"Prototype",
             "avatar":"8",
             "text": "None is of freedom or of life deserving unless he daily conquers it anew.",
             "original_pic": "http://lorempixel.com/1000/700/nature/3/",
@@ -61,6 +68,7 @@
         {
             "id": "34",
             "nickname":"John Ruskin",
+            "game":"Overwatch",
             "avatar":"3",
             "text": "Living without an aim is like sailing without a compass.",
             "original_pic": "",
@@ -69,6 +77,7 @@
         {
             "id": "33",
             "nickname":"George Eliot",
+            "game":"Elder Scrolls 4: Oblivion",
             "avatar":"6",
             "text": "What makes life dreary is the want of motive.",
             "original_pic": "http://lorempixel.com/1000/700/nature/7/",
@@ -77,6 +86,7 @@
         {
             "id": "32",
             "nickname":"Lincoln",
+            "game":"",
             "avatar":"6",
             "text": "Towering genius disdains a beaten path. It seeks regions hitherto unexplored.",
             "original_pic": "",
@@ -84,7 +94,8 @@
         },
         {
             "id": "31",
-            "nickname":"Erasmus",
+            "nickname":"Rodrigo",
+            "game":"Pokemon Sun",
             "avatar":"10",
             "text": "None is of freedom or of life deserving unless he daily conquers it anew. ",
             "original_pic": "",
@@ -93,6 +104,7 @@
         {
             "id": "30",
             "nickname":"Thomas Addison",
+            "game":"Pokemon Moon",
             "avatar":"8",
             "text": "A strong man will struggle with the storms of fate.",
             "original_pic": "",

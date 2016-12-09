@@ -27,6 +27,7 @@ var reviewModule = {
             nickname: $this.find('.ks-facebook-name').html(),
             avatar: $this.find('.ks-facebook-avatar').data('avatar-id'),
             time: appFunc.timeFormat($this.find('.ks-facebook-date').data('time')),
+            game: "Video Game Name",
             text: $this.find('.card-content-inner>p').html()
         };
 
