@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
     <title>GamerZone</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
@@ -125,18 +127,12 @@ function search(){
     <div id="profileView" class="view tab">
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="left">
-                    <a href="#"  class="refresh-click link">
-                        <i class="icon ios7-reload"></i>
-                    </a>
-                </div>
-
                 <div class="center sliding i18n" data-i18n="index.profile"></div>
             </div>
         </div>
         
         <div class="pages navbar-through">
-            <div data-distance="50" class="page infinite-scroll">
+            <div data-distance="50" class="page page-content infinite-scroll">
                 <div class="pull-to-refresh-layer">
                     <div class="preloader"></div>
                     <div class="pull-to-refresh-arrow"></div>
@@ -186,47 +182,66 @@ function search(){
         </div>
     </div>
     <!-- toolbar end -->
-    <div id="loginView" class="login-screen view modal-in no-navbar no-toolbar no-swipeback">
+    <div id="loginView"  class="login-screen view modal-in no-navbar no-toolbar no-swipeback">
         <div data-page="login-screen" class="page">
             <div class="page-content login-screen-content">
                 <div class="page-content login-screen-content">
                   <div class="content-block">
                     <div class="logo"></div>
                 </div>
-                  <form>
-                    <div class="list-block">
-                      <ul>
-                        <li class="item-content">
-                          <div class="item-inner">
-                            <div class="item-title label">Username</div>
-                            <div class="item-input">
-                              <input id="username" type="text" name="username" placeholder="Your username">
+                    <div class="lazy lazy-fadeIn" style="background: #aaa; height:100vw; background-size-cover" data-background="https://s18.postimg.org/ywfw829sp/login_background.png">
+                        <form>
+                            <div class="list-block">
+                                <ul>
+                                    <li class="item-content" style="background: #fff;">
+                                        <div class="item-inner">
+                                            <div class="item-title label">
+                                                <h2>
+                                                    Username
+                                                </h2>
+                                            </div>
+                                            <div class="item-input">
+                                                <input id="username" type="text" name="username" placeholder="Your username">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content" style="background: #fff;">
+                                        <div class="item-inner">
+                                            <div class="item-title label">
+                                                <h2>
+                                                    Password
+                                                </h2>
+                                            </div>
+                                            <div class="item-input">
+                                                <input id="password" type="password" name="password" placeholder="Your password">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                          </div>
-                        </li>
-                        <li class="item-content">
-                          <div class="item-inner">
-                            <div class="item-title label">Password</div>
-                            <div class="item-input">
-                              <input id="password" type="password" name="password" placeholder="Your password">
+                            <div class="list-block">
+                                <ul>
+                                    <li><a href="#" class="item-link list-button login-button">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAAAuCAYAAAD0kU3xAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AwGFBAKizPzHAAAD5RJREFUeAHt3FuPVUUWB/DdTQPNRaARVEClGw1GwQwjo4P6Kr7POBp9N+NHwI8gX8E3J6ATGd98MTIxmVGfJGo0KipXb6AIyE3uPfUr+t9ujt3Q9sVJ9KykTu1du2qtVeu/1qqqfU53z/DwcDMddOzYsXfOnj27Eb/e3t6mp6enuXjx4nSw/s3yWLZs2TNz5859fjom2DMZIM+cOfPcDz/8sGXfvn3NpUuXmgsXLtQCuDa/9vV0KPtb4zFnzpxm9uzZzYIFC5rFixc3AwMDzc0339wzmXn+IiBPnjz58oEDBx4/fPhwU4Bs+vv7q0yApWgIgCKzS+NboERjDYDz58/XDAbQEqXAbFasWPGLAJ0wkJ9++unwwYMHm+PHjzezZs1q5s2b15w7d258LbtPrmsBjs7pL1++XGt2FaEita+vr3nooYc2l/ud12VUOlwXyC+++GL4q6++asoaWL3H2hfhExHQ7TO+BQAHRAWxrTYFyILllltuae66667rRmff+GKaRhRKo19//XVTNjKV8fz58yuQ1kMCuzR5CyQScUhwaLPnAOp3333XnDp1yj5k+J577rkmmONGJBBLqTtPGxoCMM+ONOvg5KfRHdlpATZtF/ZG9iIic926dVtLID3bOc79mEB+9tlnw3v37m2OHj1a87W8jSlAFcLcd8Ecy6QTb4sd2TKgtYFkd2QvIoAGBweb+++/f8zI/BmQZT2sIH755Zd1W5yjBUEYYyitdlPrxAEbr2cCgW3ZtZN+/PHHZuHChfWZa2vmHXfcITJ/BuZVa2RZD4f379/ffPvtt6MRJwKBhghsL9BjCe9Upnt/fQsAlJ0TlUa4VkSjAFLsU+BTrofXrl17FZhXAXnkyJHGDrUc+JtFixY1J06cqAxyXkx0AtD2OB51fVW7PcayADu2U2n6BEQvCGASPLQ7v2srQKZ7rUfjuaTS4Q8++KAurFkHeQFKKsVIRKqz42or8kuvpQuH4jhGeeFwlYOQoQ+SViJb/xyiyeSpp0+frk6XPviax1h6xlCcES/3PF8hD0988GUDDo1flhPPyTe2LZeja8vG8Hr2aOtXJznyYRweeONHh/TVBZBvvfXWVe9WRyNSJJqYiSTaMJxJoiCDMBSgEGMxIB286TARengRoV12uOGGG+orLZ6qPyD0ZXxtCt5ZXxgBSPjgy0iMbizC0ysyzziTvp4BDx81o5KP8EUO7nFqPJF7RNZ02g8v86BXHK4KGvmoQBYl1uy/knsrkPGq6VSkLTTXDEExCi5ZsqS+mgIGp6JDok4fRbq/9dZbm1WrVlXgON33339fz7kM7RoYN910U92u33777ZWPiTuTORNzGvL0UxAQ77777srTJs8bLLpt2rSpynVfdvKVl3T3wAMPVGd47733aht+bSAD4lTtF550dK2QZT7Olx9//PFw0bt6Tp1JUXIPT2Qok2NAg6aqCAWuRZHD6xl95cqVNSIce0RMsgPlRWF5w1GLCAmtXr266l0mVR3gzjvvbNavX98MDQ2NRoe+t912W/PJJ580H374YeULPODjLdI4ksIZyCXDe0/kubFqNkm7SOZwnCy2UivTYT+64ZUor8qUj+hc3rpVB9Regfzmm29qCmFYKUpqAihlZpKAhcjxxujGG2+s99oZTXTmOSAHBwergQEtatO2Zs2aGmkihzM4PCNnYRGILyCBK+KkaV6dtMi7XZNHF04t8tgDcfClS5eOplxtcTKGZlgUfu6nw35xiiwv0TFyOF2oAqmBB1KcEjpGuXSciZrhFEaJ0chlZLX0ZjII0AzqXlSJQG2JJDXjAUCkANDmjZMCV7q1Drt2vOIoHMEYjpMoJzPyZAq2EL3l24ianvNcf7rE2bMcZanAN7pXhpP4yPjIoQs5iFyyvAsvTtrTV7x4mOE8YNR8PWVyBs4k4R8HaqcnMmNgfdJPu2gRkXE66RHASXFq/U1eZjEPY0SrqNLfPPEXiWqg6meMWh/88UFsA3QOF6DwaF/rG+OqUYCoN5P8yFwSYG2dXHNK2aaP5xIITLsxQPJA90F/kjpcdxhDJxLoQLG2TIZKVKSdkbXT1eQUxhcpjJu5ACdA6S+C9ZV9GBr45k4+MI0nnzxEHht4rs0myxhZgDyEH17RjWz3Cl7up0Lhi0d4hi/ZdDMH1MeYBJoIxaUoD9sK1p4z8CHVkc/ojImicBtEeoUSVSapj/50NwcGNlGpNRP2TB9rKmIAYGgDEN7aAgoedIl87RzEGJ7vDEeWNrzzPLy1JcrpMBWiYyi84hzkK7IN6tPZw9SuOweF2XTXZKVEaXW7kJn7zmtjOylt5gAka2PABDCnEZVSkggba67hkdp3sdbe5cuXV8eLzDxv1+3r9Jupum2XCiSvokBKBEep3E93TS6iEFlRTO1ZjOw6ffRP3+iXfu7Tpp/offjhh+suFg9p2U5WFhBhifSMyXg1eeG7v5yxRZkjUna40aM9JtfG/hoUu5DVS6iSRtdR6NeqM+kYrlNudGo/T5u+oYzLvQ1LivUEsNKR4wcKj/RPHT7kSeHSsii2Lvs9TdYu/cIjdcb+GjWZCqoL03hC0ykTnImasWKwXLflRLe0MaJ+yLOQNvfR2b3oefPNN2uXzZs31yMEQK0r+Fgj9W/ziTztkYPPoUOHmsHBwfoygDOgjO2swyPja+cZ+DCH6N4Xw0R4JpAOMyB/lOW1ZHjWaSADYxzPlDZlDmmzJoo+2Sa7USBYM+3MAWT+ndTJR1r1IsHxwwsT/FD6deraqVcn/+m6D3b4leufPFxDW7mZvg4Y6rasdjujJe1HP89jTG2h8Mi9nSdyBgSctVE0dsprj8u1Psg98PxuyVqZtvT7f9awU1AfD09pKx+Fa68Z+iCPbMaIcdUpnuU6z9PXveedFMNq18cu1WTT3/HKsUekJkWGh7EodWTqb+fqpbuX69rxjKz0T93mURnO0If5jwI5tHqw+fST3c2Zc+frTs6ibkcnFY3l9dOp05JFi+vaU89jFy42JTc08/vnNX/8w4Z6jqNozoqnTpwsTwvoly43D216sPnoo4/qxmNocKhYvmkO7j/Q4PftocPNqhUrm+XLljcP/nlTU35QXY8Nc+dcedH+5cEvmssXR7796C1rXRl77mx5s1Xa8KbDpaLL+dLW29NbbHCxOX70WLN0yUCzb8/e5k/3bWwWesvj/F36L5y/4EqKLuOMNY6DXC6ZREqeCpm/wkE4D3KP3HPG8rOPet+nk9TB4+zweB/jKVNVpEq4xocXD5zFxKtnFSWXlhfcG8rukCP1jKSNw2Wj8eqrrzZ7Pv+8/mZl/b331siYNWKoQ+V9qj9f8FWVNOqYsaik0vs2bmw2bNjQ9I5sTvaVo4cdKCPY9Jgvcm1HOrusneRaWxUUGXkfLMWuLd/CzCvO7uVBDKxvjOy6bXz3k6FEeGTgz06Rk4DDu252HJpNUBrKqytAJmwno8RExohE8hgSqEcKEAxItlp2oJu1zQH+3XffrTqW33iORioAfcXEEU3Q7nLXrl3NUHkf69wH2AsFMN8nvv/++zU9mhfjKIzl3nj65Gii/WIBylmTfpzdNSAdQQAP3LyuIzuGN3fXAWAithivD0fHC38OHxnuLRNxuJ4L5y88cvDAgdffeOONajhfAWUyMw0kw5CR6AcqYhyRodamz549e+o50MR8H2gCrq1bHBBgJuddsXaG9vVVBbLwyZfKwGIQvF0zDD2kKIY3dy/Yfdvh3KkPJxfl5ADUe1fZSgbQHw9gk4vwF+1TtZ/xbZ54xznIWHfv+pqhyhftPX19s/t2rli5Ymt5BbXFe0ReRjGGzCAMZoIYRSpnyBQyGYGh1CKFkRQEKBFqrOdxgngqvU0SiR6EZ4wdBwCkdv0BJKq10YdsGcJXYNIXGfrRgT760ddOmKEZHH/8EpnRpyowyY/wwD+gku2aPhytOPoO7OtqPLe///nigVukJUbSMZOfpA4TGubrKIZiDMbi/cg9MIBFccahD/LO0308Xh/6Mmz6MnjWd/3wMnFkfsYDFID66c+B6SCSkzb10dd4Ro3TqRHe9PJcbTxdFP0DRO08iQ92aPOI49KPHWSbUp7AugJ57uzZv3uzL1V8XjYUiQYKzSRRJLIYI6ACBKiMSwfP1MDSzmieAYehPTNp7e4BxAD6qrXF0HiQaaxx+LgHmj76a0eACV/jEEdgSDoaFwp/umrHR9tUKPrQH784iiVjaGhodH0ko2py/tz5R1beuqqnpKJh23WTpHBb0akoNN5Y/BmEMRED8jpGEyVKQAEyndzTT1SYnPFqBtQ/oAEgIHge/nEEvESzrBB+5FsL3QeY6GG8a3LIwNt1iAxteETeVIEkJxRQ6SClWqdLIGz1Pauz7eifDOzevbtZtPCGYRHp2uaAl1IqBWOKKmiqikbJ32vNfp32ZGt2VlxzFg4iGjmvzCka7eb/8+Z/e4D66KOPljPsCFnYi7ces7X2uxYLOe8NaKIHsDyCAJHRpalZICC263YUtkFkf+sifIA3sHRgK0dwREOjSV7D6//euVRqK28v6u94nL0wkGoCnsGEpW1qU/l9j2ZLdlVQ7gNm1mW2Bp5o9JvelatWbe6d1btXf5HqZ5E1Ip2bDNLICyymg4ODFX3hDFxrShZbfRL6UaRb/7QETdQWwOvsqw2xr72DrOhsDw/rYjkqPvPSP1/aeeb06eekXP28LKlAOjNhCEwRuGDhgh2Q90trPwDmEQZhaoNgcH4rckVs93MyFmBX9pZa24DixcZehljm/CmdaLRbRiLxX6+88kQCD341tYo2jAAFzP7+ec+/vGPHE4/95a/vFCEbrY2+j/PCwIFY325qrTad0kdSqSDJNWCznHnF6A2TdTEbTwLZH8mMiqCqQIZJ6hf+8cLOkdDeWHLzseIJAzY/fu/ipYF+QOcJXZq8BSxZiK0BYiPpbC0SHbdkw5H7XXPmztlZ+uzd/uKLV/2DJVgo9fjx9ttv+8cPo+FdHxTmkH/8sb+9U75Jr//RSruItLja5TqDdWlqFpBWZTd7EcHil3qOFsAEcNLv4iWLn9m2fftVIJIseqXcCqTftQASUEidvK1GTz311HPlBfGWbIqkA6nWvZ9MOEi7zgJMCdddGt8CNpUABIS9h/Qp0wFPhL722ms/vREYh41+xo8eP0TfWCXgbt++/dknn3xyTQHocQAp/njGgutMKU24BiDwlYwdR4fffTN7iaiAl/WxgLurgPPsROyXgBtNrd7+YwxMDCDtGjCd9PTTT68pQK4pEfpyqQeMMyb9jTVOe5fGtwAAEVvFdl67bdu2bcx/wTIWJ+uqaP4fNfAWC0sFKisAAAAASUVORK5CYII=" width="33%" alt="Gamer Zone Logo">
+                                    </a></li>
+                                </ul>
+                                <div class="list-block-label">
+                                    <div class="list-block">
+                                        <ul>
+                                            <li>
+                                                <img src="data:image/png;base64,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" width="33%" alt="Gamer Zone Logo">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                        </li>
-                      </ul>
+                        </form>
                     </div>
-                    <div class="list-block">
-                      <ul>
-                        <li><a href="#" class="item-link list-button">Sign In</a></li>
-                      </ul>
-                      <div class="list-block-label">
-                        <p>Only user-accounts registered in local for now.</p>
-                      </div>
-                    </div>
-                  </form>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 <!-- Please ignore the 404 error when you are not running under PhoneGap environment or delete it. -->
 <script type="text/javascript" src="app.js"></script></body>

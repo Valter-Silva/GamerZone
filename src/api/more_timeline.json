@@ -5,6 +5,7 @@
         {
             "id": "29",
             "nickname":"Jean Paul Sartre",
+            "game":"Overwatch",
             "avatar":"9",
             "text": "If you're lonely when you're alone, you're in bad company.",
             "original_pic": "http://lorempixel.com/1000/700/nature/1/",
@@ -13,6 +14,7 @@
         {
             "id": "28",
             "nickname":"Zig Ziglar",
+            "game":"Final Fantasy",
             "avatar":"08",
             "text": "Your attitude, not your aptitude, will determine your altitude.",
             "original_pic": "",
@@ -21,6 +23,7 @@
         {
             "id": "27",
             "nickname":"Winston Churchill",
+            "game":"Bioshock",
             "avatar":"1",
             "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
             "original_pic": "http://lorempixel.com/1000/700/nature/3/",
@@ -29,6 +32,7 @@
         {
             "id": "26",
             "nickname":"Nishan Panwar",
+            "game":"Far Cry 5",
             "avatar":"4",
             "text": "When life gets hard and you want to give up, remember that life is full of ups and downs, and without the downs, the ups would mean nothing.",
             "original_pic": "",
@@ -37,6 +41,7 @@
         {
             "id": "25",
             "nickname":"Paulo Coelho",
+            "game":"Battlefield 4",
             "avatar":"2",
             "text": "There is only one thing that makes a dream impossible to achieve: the fear of failure.",
             "original_pic": "http://lorempixel.com/1000/700/nature/7/",
@@ -45,6 +50,7 @@
         {
             "id": "24",
             "nickname":"Helen Keller",
+            "game":"Paper Mario",
             "avatar":"9",
             "text": "When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.",
             "original_pic": "",
